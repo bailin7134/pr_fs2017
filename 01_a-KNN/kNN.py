@@ -21,26 +21,19 @@ trainDataRow, trainDataCol = trainDataSet.shape
 #initialization
 correctCase = 0
 
-# calcualte the sum of square
-#for i in range(1): #testDataRow):
-#testDataRow = 5
-#trainDataRow = 5
-#trainDataSet = trainDataSet[0:5,:]
-
-#i=1
-
-
 for i in range(testDataRow):
     start = tm.default_timer()
     
     testEleVector = testDataSet[i,:]
     testEleMatrix = np.tile(testEleVector,trainDataRow).reshape(trainDataRow, trainDataCol)
     # euclidean distance
-    diffSquareMatrix = np.square(testEleMatrix-trainDataSet)
-    sumSquareVector = diffSquareMatrix[:,1:trainDataCol].sum(axis=1)
+    # diffSquareMatrix = np.square(testEleMatrix-trainDataSet)
+    # sumVector = diffSquareMatrix[:,1:trainDataCol].sum(axis=1)
+    # manhhatan distance
+    sumVector = np.sum(np.absolute(testEleMatrix-trainDataSet), axis=1)
 
     # sort by index
-    sumSquareVectorIndex = np.argsort(sumSquareVector)
+    sumSquareVectorIndex = np.argsort(sumVector)
     voteTable = np.array([0,0,0,0,0,0,0,0,0,0])
     # majority vote
     for j in range(K):
