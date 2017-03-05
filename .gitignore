@@ -1,0 +1,4 @@
+reports/*.aux
+reports/*.log
+reports/*.pdf
+reports/*.synctex.gz
