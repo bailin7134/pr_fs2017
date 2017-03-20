@@ -1,0 +1,31 @@
+To run the code, please typ ethe following command in console
+"python k_means.py"
+
+The print out is 
+
+When K = 
+5
+The David Bouldin index is: 
+13.3739715801
+When K = 
+7
+The David Bouldin index is: 
+11.4683725782
+When K = 
+9
+The David Bouldin index is: 
+7.74276959342
+When K = 
+10
+The David Bouldin index is: 
+10.3953881168
+When K = 
+12
+The David Bouldin index is: 
+10.8569495865
+When K = 
+15
+The David Bouldin index is: 
+8.10790859004
+
+
